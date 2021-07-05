@@ -1,4 +1,4 @@
-import { booksList } from './books.js';
+let booksList = [];
 
 const form = document.querySelector('#form');
 const bookContainer = document.querySelector('.container');
@@ -17,6 +17,7 @@ const getBookData = () => {
 const setBook = (book) => {
   const books = getBookData();
   books.push(book);
+  booksList = books;
   localStorage.setItem('BooksData', JSON.stringify(books));
 };
 
@@ -32,6 +33,7 @@ const removeBook = (element) => {
       if (position === index) {
         books.splice(index, 1);
       }
+      booksList = books;
       localStorage.setItem('BooksData', JSON.stringify(books));
     });
   }
