@@ -20,23 +20,23 @@ const setBook = (book) => {
   localStorage.setItem("BooksData", JSON.stringify(books));
 };
 
-// const removeBook = (element) => {
-//   const books = getBookData();
-//   let position =
-//     Array.prototype.indexOf.call(
-//       bookContainer.childNodes,
-//       element.parentElement
-//     ) - 1;
+const removeBook = (element) => {
+  const books = getBookData();
+  let position =
+    Array.prototype.indexOf.call(
+      bookContainer.childNodes,
+      element.parentElement
+    ) - 1;
 
-//   if (element.classList.contains("btn")) {
-//     books.forEach((book, index) => {
-//       if (position == index) {
-//         books.splice(index, 1);
-//       }
-//       localStorage.setItem("BooksData", JSON.stringify(books));
-//     });
-//   }
-// };
+  if (element.classList.contains("btn")) {
+    books.forEach((book, index) => {
+      if (position == index) {
+        books.splice(index, 1);
+      }
+      localStorage.setItem("BooksData", JSON.stringify(books));
+    });
+  }
+};
 
 const addBookToViewport = (book) => {
     const item = document.createElement("li");
