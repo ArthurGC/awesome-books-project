@@ -14,11 +14,11 @@ const getBookData = () => {
     return books;
   };
 
-// const setBook = (book) => {
-//   const books = getBookData();
-//   books.push(book);
-//   localStorage.setItem("BooksData", JSON.stringify(books));
-// };
+const setBook = (book) => {
+  const books = getBookData();
+  books.push(book);
+  localStorage.setItem("BooksData", JSON.stringify(books));
+};
 
 // const removeBook = (element) => {
 //   const books = getBookData();
