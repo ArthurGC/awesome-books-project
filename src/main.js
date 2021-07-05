@@ -49,16 +49,16 @@ const addBookToViewport = (book) => {
     bookContainer.appendChild(item);
   };
 
-  // const removeBookInViewport = (element) => {
-//   if (element.classList.contains("btn")) {
-//     element.parentElement.remove();
-//   }
-// };
+  const removeBookInViewport = (element) => {
+  if (element.classList.contains("btn")) {
+    element.parentElement.remove();
+  }
+};
 
-// const displayBooks = () => {
-//     const books = getBookData();
-//     books.forEach((book) => addBookToViewport(book));
-//   };
+const displayBooks = () => {
+    const books = getBookData();
+    books.forEach((book) => addBookToViewport(book));
+  };
   
   document.addEventListener("DOMContentLoaded", () => {
     displayBooks();
