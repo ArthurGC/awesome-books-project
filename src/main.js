@@ -10,7 +10,6 @@ const getBookData = () => {
   } else {
     books = booksList;
   }
-
   return books;
 };
 
