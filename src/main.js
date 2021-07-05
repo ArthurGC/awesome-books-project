@@ -78,8 +78,8 @@ const displayBooks = () => {
     }
   });
   
-  // bookContainer.addEventListener("click", (e) => {
-  //   removeBook(e.target);
-  //   removeBookInViewport(e.target);
-  // });
+  bookContainer.addEventListener("click", (e) => {
+    removeBook(e.target);
+    removeBookInViewport(e.target);
+  });
   
