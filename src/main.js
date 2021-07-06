@@ -73,11 +73,6 @@ class Store {
   
 }
 
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   List.displayBooks();
 });
@@ -91,12 +86,12 @@ form.addEventListener('submit', (e) => {
   if (title !== '' && author !== '') {
     const book = { title: `${title}`, author: `${author}` };
     List.addBookToViewport(book);
-    setBook(book);
+    Store.setBook(book);
     form.reset();
   }
 });
 
 bookContainer.addEventListener('click', (e) => {
-  removeBook(e.target);
+  Store.removeBook(e.target);
   List.removeBookInViewport(e.target);
 });
