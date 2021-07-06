@@ -10,6 +10,31 @@ class Book {
   }
 }
 
+class List {
+  
+  static addBookToViewport = (book) => {
+    const item = document.createElement('li');
+  
+    item.innerHTML = `
+            <p>${book.title} by ${book.author}</p>
+            <button class="btn">Remove</button>
+            `;
+  
+    bookContainer.appendChild(item);
+  };
+
+  static displayBooks = () => {
+    const books = getBookData();
+    books.forEach((book) => addBookToViewport(book));
+  };
+
+  static removeBookInViewport = (element) => {
+    if (element.classList.contains('btn')) {
+      element.parentElement.remove();
+    }
+  };
+}
+
 const getBookData = () => {
   let books;
   if (localStorage.getItem('BooksData') != null) {
@@ -43,28 +68,6 @@ const removeBook = (element) => {
       localStorage.setItem('BooksData', JSON.stringify(books));
     });
   }
-};
-
-const addBookToViewport = (book) => {
-  const item = document.createElement('li');
-
-  item.innerHTML = `
-          <p>${book.title} by ${book.author}</p>
-          <button class="btn">Remove</button>
-          `;
-
-  bookContainer.appendChild(item);
-};
-
-const removeBookInViewport = (element) => {
-  if (element.classList.contains('btn')) {
-    element.parentElement.remove();
-  }
-};
-
-const displayBooks = () => {
-  const books = getBookData();
-  books.forEach((book) => addBookToViewport(book));
 };
 
 document.addEventListener('DOMContentLoaded', () => {
