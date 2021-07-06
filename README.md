@@ -2,7 +2,7 @@
 
 # Awesome Books Project
 
-In this project, We set up our Awesome Books page. Our goal for today was add the functionality to add/save/remove books from our DOM and localStorage. 
+In this project, We set up our Awesome Books page. Our goal for today was add the functionality to add/save/remove books from our DOM and localStorage using Classes. 
 
 ## :red_circle: Live Demo
 
@@ -22,6 +22,7 @@ To get a local copy up and running follow these simple steps:
 
 - Understand different ways to create objects in JavaScript.
 - Create and access properties and methods of JavaScript objects.
+- Use JavaScript classes.
 
 ## Authors
 
