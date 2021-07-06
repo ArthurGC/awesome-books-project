@@ -3,65 +3,76 @@ let booksList = [];
 const form = document.querySelector('#form');
 const bookContainer = document.querySelector('.container');
 
-const getBookData = () => {
-  let books;
-  if (localStorage.getItem('BooksData') != null) {
-    books = JSON.parse(localStorage.getItem('BooksData'));
-  } else {
-    books = booksList;
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
   }
-  return books;
-};
+}
 
-const setBook = (book) => {
-  const books = getBookData();
-  books.push(book);
-  booksList = books;
-  localStorage.setItem('BooksData', JSON.stringify(books));
-};
+class Store {
+  static getBookData = () => {
+    let books;
+    if (localStorage.getItem('BooksData') != null) {
+      books = JSON.parse(localStorage.getItem('BooksData'));
+    } else {
+      books = booksList;
+    }
+    return books;
+  };
 
-const removeBook = (element) => {
-  const books = getBookData();
-  const position = Array.prototype.indexOf.call(
-    bookContainer.childNodes,
-    element.parentElement,
-  ) - 1;
+  static setBook = (book) => {
+    const books = Store.getBookData();
+    books.push(book);
+    booksList = books;
+    localStorage.setItem('BooksData', JSON.stringify(books));
+  };
 
-  if (element.classList.contains('btn')) {
-    books.forEach((book, index) => {
-      if (position === index) {
-        books.splice(index, 1);
-      }
-      booksList = books;
-      localStorage.setItem('BooksData', JSON.stringify(books));
-    });
-  }
-};
+  static removeBook = (element) => {
+    const books = Store.getBookData();
+    const position = Array.prototype.indexOf.call(
+      bookContainer.childNodes,
+      element.parentElement,
+    ) - 1;
 
-const addBookToViewport = (book) => {
-  const item = document.createElement('li');
+    if (element.classList.contains('btn')) {
+      books.forEach((book, index) => {
+        if (position === index) {
+          books.splice(index, 1);
+        }
+        booksList = books;
+        localStorage.setItem('BooksData', JSON.stringify(books));
+      });
+    }
+  };
+}
 
-  item.innerHTML = `
-          <p>${book.title} by ${book.author}</p>
-          <button class="btn">Remove</button>
-          `;
+class List {
+  static addBookToViewport = (book) => {
+    const item = document.createElement('li');
 
-  bookContainer.appendChild(item);
-};
+    item.innerHTML = `
+            <p>${book.title} by ${book.author}</p>
+            <button class="btn">Remove</button>
+            `;
 
-const removeBookInViewport = (element) => {
-  if (element.classList.contains('btn')) {
-    element.parentElement.remove();
-  }
-};
+    bookContainer.appendChild(item);
+  };
 
-const displayBooks = () => {
-  const books = getBookData();
-  books.forEach((book) => addBookToViewport(book));
-};
+  static displayBooks = () => {
+    const books = Store.getBookData();
+    books.forEach((book) => List.addBookToViewport(book));
+  };
+
+  static removeBookInViewport = (element) => {
+    if (element.classList.contains('btn')) {
+      element.parentElement.remove();
+    }
+  };
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-  displayBooks();
+  List.displayBooks();
 });
 
 form.addEventListener('submit', (e) => {
@@ -71,14 +82,14 @@ form.addEventListener('submit', (e) => {
   const author = document.querySelector('#author').value;
 
   if (title !== '' && author !== '') {
-    const book = { title: `${title}`, author: `${author}` };
-    addBookToViewport(book);
-    setBook(book);
+    const book = new Book(title, author);
+    List.addBookToViewport(book);
+    Store.setBook(book);
     form.reset();
   }
 });
 
 bookContainer.addEventListener('click', (e) => {
-  removeBook(e.target);
-  removeBookInViewport(e.target);
+  Store.removeBook(e.target);
+  List.removeBookInViewport(e.target);
 });
