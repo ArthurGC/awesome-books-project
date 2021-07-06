@@ -35,15 +35,19 @@ class List {
   };
 }
 
-const getBookData = () => {
-  let books;
-  if (localStorage.getItem('BooksData') != null) {
-    books = JSON.parse(localStorage.getItem('BooksData'));
-  } else {
-    books = booksList;
-  }
-  return books;
-};
+class Store {
+  static getBookData = () => {
+    let books;
+    if (localStorage.getItem('BooksData') != null) {
+      books = JSON.parse(localStorage.getItem('BooksData'));
+    } else {
+      books = booksList;
+    }
+    return books;
+  };
+}
+
+
 
 const setBook = (book) => {
   const books = getBookData();
