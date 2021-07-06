@@ -25,7 +25,7 @@ class List {
 
   static displayBooks = () => {
     const books = Store.getBookData();
-    books.forEach((book) => addBookToViewport(book));
+    books.forEach((book) => List.addBookToViewport(book));
   };
 
   static removeBookInViewport = (element) => {
