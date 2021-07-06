@@ -3,6 +3,13 @@ let booksList = [];
 const form = document.querySelector('#form');
 const bookContainer = document.querySelector('.container');
 
+class Book {
+  constructor(title,author) {
+    this.title = title;
+    this.author = author;
+  }
+}
+
 const getBookData = () => {
   let books;
   if (localStorage.getItem('BooksData') != null) {
