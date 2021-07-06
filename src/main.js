@@ -71,7 +71,7 @@ const removeBook = (element) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  displayBooks();
+  List.displayBooks();
 });
 
 form.addEventListener('submit', (e) => {
@@ -82,7 +82,7 @@ form.addEventListener('submit', (e) => {
 
   if (title !== '' && author !== '') {
     const book = { title: `${title}`, author: `${author}` };
-    addBookToViewport(book);
+    List.addBookToViewport(book);
     setBook(book);
     form.reset();
   }
@@ -90,5 +90,5 @@ form.addEventListener('submit', (e) => {
 
 bookContainer.addEventListener('click', (e) => {
   removeBook(e.target);
-  removeBookInViewport(e.target);
+  List.removeBookInViewport(e.target);
 });
