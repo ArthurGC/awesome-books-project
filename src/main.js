@@ -45,16 +45,18 @@ class Store {
     }
     return books;
   };
+
+  static setBook = (book) => {
+    const books = getBookData();
+    books.push(book);
+    booksList = books;
+    localStorage.setItem('BooksData', JSON.stringify(books));
+  };
+  
 }
 
 
 
-const setBook = (book) => {
-  const books = getBookData();
-  books.push(book);
-  booksList = books;
-  localStorage.setItem('BooksData', JSON.stringify(books));
-};
 
 const removeBook = (element) => {
   const books = getBookData();
