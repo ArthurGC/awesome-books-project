@@ -52,29 +52,31 @@ class Store {
     booksList = books;
     localStorage.setItem('BooksData', JSON.stringify(books));
   };
+
+  static removeBook = (element) => {
+    const books = getBookData();
+    const position = Array.prototype.indexOf.call(
+      bookContainer.childNodes,
+      element.parentElement,
+    ) - 1;
+  
+    if (element.classList.contains('btn')) {
+      books.forEach((book, index) => {
+        if (position === index) {
+          books.splice(index, 1);
+        }
+        booksList = books;
+        localStorage.setItem('BooksData', JSON.stringify(books));
+      });
+    }
+  };
   
 }
 
 
 
 
-const removeBook = (element) => {
-  const books = getBookData();
-  const position = Array.prototype.indexOf.call(
-    bookContainer.childNodes,
-    element.parentElement,
-  ) - 1;
 
-  if (element.classList.contains('btn')) {
-    books.forEach((book, index) => {
-      if (position === index) {
-        books.splice(index, 1);
-      }
-      booksList = books;
-      localStorage.setItem('BooksData', JSON.stringify(books));
-    });
-  }
-};
 
 document.addEventListener('DOMContentLoaded', () => {
   List.displayBooks();
