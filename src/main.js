@@ -24,7 +24,7 @@ class List {
   };
 
   static displayBooks = () => {
-    const books = getBookData();
+    const books = Store.getBookData();
     books.forEach((book) => addBookToViewport(book));
   };
 
@@ -47,14 +47,14 @@ class Store {
   };
 
   static setBook = (book) => {
-    const books = getBookData();
+    const books = Store.getBookData();
     books.push(book);
     booksList = books;
     localStorage.setItem('BooksData', JSON.stringify(books));
   };
 
   static removeBook = (element) => {
-    const books = getBookData();
+    const books = Store.getBookData();
     const position = Array.prototype.indexOf.call(
       bookContainer.childNodes,
       element.parentElement,
@@ -84,7 +84,7 @@ form.addEventListener('submit', (e) => {
   const author = document.querySelector('#author').value;
 
   if (title !== '' && author !== '') {
-    const book = { title: `${title}`, author: `${author}` };
+    const book = new Book(title, author);
     List.addBookToViewport(book);
     Store.setBook(book);
     form.reset();
