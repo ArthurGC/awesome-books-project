@@ -4,6 +4,7 @@ table {
   margin: 40px;
 }
 
-.heading {
+.heading, h2 {
   text-align: center;
 }
+
