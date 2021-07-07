@@ -1,19 +1,19 @@
-
 body {
   width: 100%;
-  height: 100vh;
+  height: 96vh;
 }
+
 .table {
- margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 #form {
-  margin: 5rem 0;
+  margin: 3rem 0;
 }
 
-.heading{
+.heading {
   text-align: center;
-  margin: 2rem 0;
+  padding: 2rem 0;
 }
 
 .title2 {
@@ -22,4 +22,4 @@ body {
 
 .btn {
   float: right;
-  } 
+}
