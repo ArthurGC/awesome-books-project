@@ -54,7 +54,7 @@ class List {
     item.innerHTML = `
       <td>${book.title}</td>
       <td>${book.author}</td>
-      <td><button class="btn">Remove</button></td>
+      <td><button class="btn btn-primary">Remove</button></td>
       `;
 
     bookContainer.appendChild(item);
