@@ -1,6 +1,10 @@
 /* A comment */
 
 table {
+ padding: 40px;
+}
+
+form {
   margin: 40px;
 }
 
