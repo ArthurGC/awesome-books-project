@@ -49,7 +49,7 @@ class Store {
 
 class List {
   static addBookToViewport = (book) => {
-    const item = document.createElement('li');
+    const item = document.createElement('tr');
 
     item.innerHTML = `
             <p>${book.title} by ${book.author}</p>
