@@ -1,1 +1,25 @@
-/* A comment */
+body {
+  width: 100%;
+  height: 96vh;
+}
+
+.table {
+  margin-bottom: 2rem;
+}
+
+#form {
+  margin: 3rem 0;
+}
+
+.heading {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.title2 {
+  margin-top: 4rem;
+}
+
+.btn {
+  float: right;
+}

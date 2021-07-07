@@ -1,7 +1,7 @@
 let booksList = [];
 
 const form = document.querySelector('#form');
-const bookContainer = document.querySelector('.container');
+const bookContainer = document.querySelector('.book-container');
 
 class Book {
   constructor(title, author) {
@@ -32,7 +32,7 @@ class Store {
     const books = Store.getBookData();
     const position = Array.prototype.indexOf.call(
       bookContainer.childNodes,
-      element.parentElement,
+      element.parentElement.parentElement,
     ) - 1;
 
     if (element.classList.contains('btn')) {
@@ -49,12 +49,13 @@ class Store {
 
 class List {
   static addBookToViewport = (book) => {
-    const item = document.createElement('li');
+    const item = document.createElement('tr');
 
     item.innerHTML = `
-            <p>${book.title} by ${book.author}</p>
-            <button class="btn">Remove</button>
-            `;
+      <td>${book.title}</td>
+      <td>${book.author}</td>
+      <td><button class="btn btn-primary">Remove</button></td>
+      `;
 
     bookContainer.appendChild(item);
   };
@@ -66,7 +67,7 @@ class List {
 
   static removeBookInViewport = (element) => {
     if (element.classList.contains('btn')) {
-      element.parentElement.remove();
+      element.parentElement.parentElement.remove();
     }
   };
 }
