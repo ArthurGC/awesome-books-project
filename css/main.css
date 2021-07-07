@@ -1,14 +1,19 @@
 /* A comment */
 
-table {
- padding: 40px;
+.table {
+ margin-bottom: 2rem;
 }
 
-form {
-  margin: 40px;
+#form {
+  margin: 5rem 0;
 }
 
-.heading, h2 {
+.heading{
   text-align: center;
+  margin: 2rem 0;
+}
+
+.title2 {
+  margin-top: 4rem;
 }
 
