@@ -52,9 +52,10 @@ class List {
     const item = document.createElement('tr');
 
     item.innerHTML = `
-            <p>${book.title} by ${book.author}</p>
-            <button class="btn">Remove</button>
-            `;
+      <td>${book.title}</td>
+      <td>${book.author}</td>
+      <td><button class="btn">Remove</button></td>
+      `;
 
     bookContainer.appendChild(item);
   };
