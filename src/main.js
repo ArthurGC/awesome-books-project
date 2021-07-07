@@ -32,7 +32,7 @@ class Store {
     const books = Store.getBookData();
     const position = Array.prototype.indexOf.call(
       bookContainer.childNodes,
-      element.parentElement,
+      element.parentElement.parentElement,
     ) - 1;
 
     if (element.classList.contains('btn')) {
@@ -67,7 +67,7 @@ class List {
 
   static removeBookInViewport = (element) => {
     if (element.classList.contains('btn')) {
-      element.parentElement.remove();
+      element.parentElement.parentElement.remove();
     }
   };
 }
