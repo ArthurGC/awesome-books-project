@@ -1,7 +1,7 @@
 let booksList = [];
 
 const form = document.querySelector('#form');
-const bookContainer = document.querySelector('.container');
+const bookContainer = document.querySelector('.book-container');
 
 class Book {
   constructor(title, author) {
