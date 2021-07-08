@@ -39,3 +39,14 @@ footer {
 .btn {
   float: right;
 }
+
+h2 {
+  text-align: center;
+  margin: 6rem;
+}
+
+#contact div {
+  width: 80%;
+  margin: 20px auto;
+  font-size: 20px;
+}
