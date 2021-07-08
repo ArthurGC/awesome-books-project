@@ -101,24 +101,26 @@ bookContainer.addEventListener('click', (e) => {
 const listSection = document.querySelector('#list');
 const addSection = document.querySelector('#add');
 const contactSection = document.querySelector('#contact');
-const menuButtons = [...document.querySelector('.navbar-nav li a')];
+const menuButtons = [...document.querySelectorAll('.navbar-nav a')];
 
-const showSection = (element) => {
-  if (element.dataset.id === 1) {
+const showSection = (e) => {
+  e.preventDefault();
+  if (e.target.dataset.id === '1') {
+    console.log('Right');
     listSection.style.display = 'block';
     addSection.style.display = 'none';
     contactSection.style.display = 'none';
-  } else if (element.dataset.id === 2) {
+  } else if (e.target.dataset.id === '2') {
     listSection.style.display = 'none';
     addSection.style.display = 'block';
     contactSection.style.display = 'none';
-  }else if (element.dataset.id === 3) {
+  }else if (e.target.dataset.id === '3') {
     listSection.style.display = 'none';
     addSection.style.display = 'none';
     contactSection.style.display = 'block';
   }
-  
+
 }
 menuButtons.forEach(menu => {
-  menu.addEventListener('click', (e) => showSection(e.target));
+  menu.addEventListener('click', (e) => showSection(e));
 })
