@@ -3,6 +3,10 @@ body {
   height: 96vh;
 }
 
+footer {
+  text-align: center;
+  margin-top: 60px;
+}
 .table {
   margin-bottom: 2rem;
 }
