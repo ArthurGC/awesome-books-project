@@ -1,27 +1,33 @@
-// Menu functionality
+// Menu Import
 import { openCloseMenu, hambIcon, menuLinks } from './menu.js';
 
-// Books functionality
+// Books Import
 import {
   Book, Store, List, form, bookContainer,
 } from './books.js';
 
-// Add Book validation functionality
+// Book validation Import
 import {
   titleInput, authorInput, cleanError, titleError, authorError,
 } from './validation.js';
 
-// Navbar navigation functionality
+// Navbar navigation Import
 
 import { menuButtons, showSection } from './navigation.js';
 
-// Luxon functionality
+// Luxon Import
 import { fullDate, addDateToViewport } from './time.js';
+
+// Menu functionality Start
 
 hambIcon.addEventListener('click', openCloseMenu);
 menuLinks.forEach((link) => {
   link.addEventListener('click', openCloseMenu);
 });
+
+// Menu functionality End
+
+// Books functionality Start
 
 document.addEventListener('DOMContentLoaded', () => {
   List.displayBooks();
@@ -52,11 +58,21 @@ bookContainer.addEventListener('click', (e) => {
   List.removeBookInViewport(e.target);
 });
 
+// Books functionality End
+
+// Add Book validation functionality Start
+
 titleInput.addEventListener('change', (e) => cleanError(e.target));
 authorInput.addEventListener('change', (e) => cleanError(e.target));
+
+// Add Book validation functionality End
+
+// Navbar navigation functionality Start
 
 menuButtons.forEach((menu) => {
   menu.addEventListener('click', (e) => showSection(e));
 });
 
 addDateToViewport(fullDate);
+
+// Navbar navigation functionality End
