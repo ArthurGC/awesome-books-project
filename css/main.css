@@ -1,9 +1,8 @@
 body {
   width: 100%;
   min-height: 100vh;
-  display: flex; 
+  display: flex;
   flex-direction: column;
-
 }
 
 footer {
@@ -23,7 +22,8 @@ footer {
   display: block;
 }
 
-#add, #contact {
+#add,
+#contact {
   display: none;
 }
 
@@ -38,10 +38,6 @@ footer {
 .heading {
   text-align: center;
   padding: 2rem 0;
-}
-
-.title2 {
-  margin-top: 4rem;
 }
 
 .btn {

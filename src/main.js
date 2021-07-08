@@ -1,7 +1,9 @@
 let booksList = [];
-var DateTime = luxon.DateTime;
+/* eslint-disable */
+const { DateTime } = luxon;
+/* eslint-enable */
 const dt = DateTime.now();
-const full_date = dt.toLocaleString(DateTime.DATETIME_MED);
+const fullDate = dt.toLocaleString(DateTime.DATETIME_MED);
 
 const form = document.querySelector('#form');
 const bookContainer = document.querySelector('.book-container');
@@ -99,8 +101,7 @@ bookContainer.addEventListener('click', (e) => {
   List.removeBookInViewport(e.target);
 });
 
-
-//Menu Funtionality 
+// Menu Functionality
 
 const listSection = document.querySelector('#list');
 const addSection = document.querySelector('#add');
@@ -117,15 +118,14 @@ const showSection = (e) => {
     listSection.style.display = 'none';
     addSection.style.display = 'block';
     contactSection.style.display = 'none';
-  }else if (e.target.dataset.id === '3') {
+  } else if (e.target.dataset.id === '3') {
     listSection.style.display = 'none';
     addSection.style.display = 'none';
     contactSection.style.display = 'block';
   }
-
-}
-menuButtons.forEach(menu => {
+};
+menuButtons.forEach((menu) => {
   menu.addEventListener('click', (e) => showSection(e));
-})
+});
 
-date.innerHTML = `<p>${full_date}</p>`
+date.innerHTML = `<p>${fullDate}</p>`;
