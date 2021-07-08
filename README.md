@@ -2,7 +2,7 @@
 
 # Awesome Books Project
 
-In this project, We set up our Awesome Books page. Our goal was add the functionality to add/save/remove books from our DOM and localStorage using Classes and add styles to our core elements. 
+In this project, We set up our Awesome Books page. Our goal was add the functionality to add/save/remove books from our DOM and localStorage using Classes and add styles to our core elements in a single page. 
 
 ## :red_circle: Live Demo
 
