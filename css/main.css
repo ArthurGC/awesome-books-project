@@ -15,6 +15,14 @@ footer {
   margin: 3rem 0;
 }
 
+#list {
+  display: block;
+}
+
+#add, #contact {
+  display: none;
+}
+
 .heading {
   text-align: center;
   padding: 2rem 0;
