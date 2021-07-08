@@ -18,6 +18,11 @@
             
             li {
 
+                .error-title,
+                .error-author {
+                    @include muli-text(15px, 500, 32px);
+                    color: red;
+                }
                 label {
                     display: block;
                     margin-top: calc(.5rem + 0.3vh);

@@ -34,11 +34,12 @@
             }
             .btn-book {
                 cursor: pointer;
-                padding: 3px 5px;
+                padding: calc(4px + .1vw) calc(6px + .2vw);
                 background: red;
                 color: $clr-primary-white;
                 border-radius: 5px;
                 border: 1px solid $clr-primary-text;
+                transition: transform .8s, background .5s;
             }
         }
     }

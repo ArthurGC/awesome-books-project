@@ -149,7 +149,7 @@ header .timeBox {
 .books .container .book-item {
   padding: calc(.3rem + 0.3vw) calc(.5rem + 4.5vw);
   width: 100%;
-  background: #aec8ec;
+  background: #9bc5ff;
   border-radius: 8px;
   margin-bottom: 1rem;
   display: flex;
@@ -166,11 +166,12 @@ header .timeBox {
 }
 .books .container .book-item .btn-book {
   cursor: pointer;
-  padding: 3px 5px;
+  padding: calc(4px + .1vw) calc(6px + .2vw);
   background: red;
   color: #fff;
   border-radius: 5px;
   border: 1px solid #3d5060;
+  transition: transform 0.8s, background 0.5s;
 }
 
 .add {
@@ -192,6 +193,15 @@ header .timeBox {
 }
 .add .form ul {
   margin: calc(1rem + 2vh) 0;
+}
+.add .form ul li .error-title,
+.add .form ul li .error-author {
+  font-family: muli, sans-serif;
+  font-style: normal;
+  font-size: calc(15px + 0.3vw);
+  font-weight: 500;
+  line-height: 32px;
+  color: red;
 }
 .add .form ul li label {
   display: block;
@@ -220,7 +230,7 @@ header .timeBox {
   width: 130px;
   height: 45px;
   border-radius: 5px;
-  background: #aec8ec;
+  background: #9bc5ff;
   color: #1248a3;
   font-family: muli, sans-serif;
   font-style: normal;
@@ -277,6 +287,11 @@ header .timeBox {
   font-weight: 500;
   line-height: 24px;
   color: #fff;
+}
+
+.books .container .book-item .btn-book:hover {
+  transform: scale(1.1);
+  background: #f16565;
 }
 
 /*# sourceMappingURL=main.css.map */

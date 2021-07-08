@@ -16,14 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
   
-    const title = document.querySelector('#title').value;
-    const author = document.querySelector('#author').value;
+    const title = document.querySelector('#title');
+    const author = document.querySelector('#author');
   
-    if (title !== '' && author !== '') {
-      const book = new Book(title, author);
+    if (title.value !== '' && author.value !== '') {
+      const book = new Book(title.value, author.value);
       List.addBookToViewport(book);
       Store.setBook(book);
       form.reset();
+    } else if (title.value === '') {
+      title.style.border = '2px solid red';
+      titleError.textContent = "Please, provide a Title";
+    } else if (author.value === '') {
+      author.style.border = '2px solid red';
+      authorError.textContent = "Please, provide an Author";
     }
   });
   
@@ -31,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
     Store.removeBook(e.target);
     List.removeBookInViewport(e.target);
   });
+
+// Add Book validation functionality
+import {titleInput, authorInput, cleanError, titleError, authorError} from './validation.js'
+
+titleInput.addEventListener('change', (e) => cleanError(e.target));
+authorInput.addEventListener('change', (e) => cleanError(e.target))
 
 // Navbar navigation functionality
 
