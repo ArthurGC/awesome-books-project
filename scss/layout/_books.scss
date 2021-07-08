@@ -1,1 +1,45 @@
 @use '../utilities' as *;
+
+.books {
+    display: block;
+    padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
+    
+    &__title {
+        @include muli-text(24px, 800, 32px, 0.7);
+        text-align: center;
+        color: $clr-primary-white;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: calc(1rem + 2vh) 0;
+        margin-inline: auto;
+        background: $clr-primary-white;
+        min-height: 450px;
+        max-height: 70vh;
+        border-radius: 16px;
+        padding: calc(.3rem + 2vh);
+        overflow: auto;
+
+        .book-item {
+            padding: calc(.3rem + 0.3vw) calc(.5rem + 4.5vw);
+            width: 100%;
+            background: $clr-shadow;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            @include flex(row, center, space-between);
+
+            .book-data {
+                @include muli-text(14px, 500, 24px);
+            }
+            .btn-book {
+                cursor: pointer;
+                padding: 3px 5px;
+                background: red;
+                color: $clr-primary-white;
+                border-radius: 5px;
+                border: 1px solid $clr-primary-text;
+            }
+        }
+    }
+}

@@ -1,1 +1,89 @@
 @use '../utilities' as *;
+
+header {
+  .navbar {
+    padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
+    @include flex(row, center, space-between);
+
+    &__logo {
+      @include marker-text(18px, 400, 32px);
+      color: $clr-primary-white;
+      cursor: pointer;
+    }
+
+    .hamb {
+      position: relative;
+      font-size: calc(24px + 0.3vw);
+      cursor: pointer;
+      color: $clr-primary-white;
+      z-index: 1000;
+    }
+  }
+}
+
+.navbar__sub.active {
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+  transition: left 0.8s, visibility 0.8s, opacity 0.4s;
+}
+
+@media (max-width: 768px) {
+  header {
+    .navbar {
+      &__sub {
+        visibility: hidden;
+        opacity: 0;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba($color: $clr-background-dark, $alpha: 0.9);
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        transition: left 0.8s, visibility 0.8s, opacity 0.4s;
+        padding: 10rem 4rem;
+        z-index: 100;
+
+        li {
+          margin-bottom: 5rem;
+
+          .items {
+            @include muli-text(36px, 800, 44px, 0);
+            color: $clr-primary-white;
+            transition: color 1s;
+            cursor: pointer;
+
+            &:hover {
+              color: $clr-primary-text;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    .navbar {
+      .hamb {
+        display: none;
+      }
+
+      &__sub {
+        @include flex(row, center, center);
+        li {
+          margin: 0 1rem;
+
+          .items {
+            @include muli-text(16px, 500, 32px);
+            cursor: pointer;
+            color: $clr-primary-white;
+          }
+        }
+      }
+    }
+  }
+}

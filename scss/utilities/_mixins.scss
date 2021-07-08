@@ -1,15 +1,14 @@
-@mixin muli-text($size, $weight, $height) {
+@mixin muli-text($size, $weight, $height, $increase: 0.3) {
   font-family: muli, sans-serif;
   font-style: normal;
-  //   font-size: calc($size + 0.5vw);
-  font-size: $size;
+  font-size: calc(#{$size} + #{$increase}vw);
   font-weight: $weight;
   line-height: $height;
 }
 @mixin marker-text($size, $weight, $height) {
   font-family: 'Permanent Marker', cursive;
   font-style: normal;
-  font-size: $size;
+  font-size: calc(#{$size} + 0.6vw);
   font-weight: $weight;
   line-height: $height;
 }
