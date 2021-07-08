@@ -94,3 +94,31 @@ bookContainer.addEventListener('click', (e) => {
   Store.removeBook(e.target);
   List.removeBookInViewport(e.target);
 });
+
+
+//Menu Funtionality 
+
+const listSection = document.querySelector('#list');
+const addSection = document.querySelector('#add');
+const contactSection = document.querySelector('#contact');
+const menuButtons = [...document.querySelector('.navbar-nav li a')];
+
+const showSection = (element) => {
+  if (element.dataset.id === 1) {
+    listSection.style.display = 'block';
+    addSection.style.display = 'none';
+    contactSection.style.display = 'none';
+  } else if (element.dataset.id === 2) {
+    listSection.style.display = 'none';
+    addSection.style.display = 'block';
+    contactSection.style.display = 'none';
+  }else if (element.dataset.id === 3) {
+    listSection.style.display = 'none';
+    addSection.style.display = 'none';
+    contactSection.style.display = 'block';
+  }
+  
+}
+menuButtons.forEach(menu => {
+  menu.addEventListener('click', (e) => showSection(e.target));
+})
