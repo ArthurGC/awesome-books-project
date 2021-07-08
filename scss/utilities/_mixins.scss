@@ -5,6 +5,7 @@
   font-weight: $weight;
   line-height: $height;
 }
+
 @mixin marker-text($size, $weight, $height) {
   font-family: 'Permanent Marker', cursive;
   font-style: normal;
@@ -16,9 +17,11 @@
 @mixin flex($direction, $align: false, $justify: false) {
   display: flex;
   flex-direction: $direction;
+
   @if $align {
     align-items: $align;
   }
+
   @if $justify {
     justify-content: $justify;
   }

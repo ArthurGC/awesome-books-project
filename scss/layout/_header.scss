@@ -3,10 +3,12 @@
 header {
   .navbar {
     padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
+
     @include flex(row, center, space-between);
 
     &__logo {
       @include marker-text(18px, 400, 32px);
+
       color: $clr-primary-white;
       cursor: pointer;
     }
@@ -24,7 +26,9 @@ header {
     text-align: right;
     padding: 0 calc(1.5rem + 4.5vw);
     color: $clr-primary-white;
+
     @include muli-text(16px, 500, 32px);
+
     margin: 0 1rem;
   }
 }
@@ -59,6 +63,7 @@ header {
 
           .items {
             @include muli-text(36px, 800, 44px, 0);
+
             color: $clr-primary-white;
             transition: color 1s;
             cursor: pointer;
@@ -82,11 +87,13 @@ header {
 
       &__sub {
         @include flex(row, center, center);
+
         li {
           margin: 0 1rem;
 
           .items {
             @include muli-text(16px, 500, 32px);
+
             cursor: pointer;
             color: $clr-primary-white;
           }

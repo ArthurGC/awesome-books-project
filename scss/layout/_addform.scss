@@ -1,53 +1,62 @@
 @use '../utilities' as *;
 
 .add {
-    display: none;
-    padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
+  display: none;
+  padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
 
-    &__title {
-        @include muli-text(24px, 800, 32px, 0.7);
-        text-align: center;
-        color: $clr-primary-white;
-    }
+  &__title {
+    @include muli-text(24px, 800, 32px, 0.7);
 
-    .form {
-        max-width: 768px;
-        margin-inline: auto;
-        ul {
-            margin: calc(1rem + 2vh) 0;
-            
-            li {
+    text-align: center;
+    color: $clr-primary-white;
+  }
 
-                .error-title,
-                .error-author {
-                    @include muli-text(15px, 500, 32px);
-                    color: red;
-                }
-                label {
-                    display: block;
-                    margin-top: calc(.5rem + 0.3vh);
-                    @include muli-text(16px, 500, 32px);
-                    color: $clr-primary-white;
-                }
-                input {
-                    margin: calc(.5rem + 0.3vh) 0;
-                    width: 100%;
-                    border-radius: 5px;
-                    height: calc(25px + 0.8vh);
-                    @include muli-text(16px, 500, 12px);
-                    padding: 0 1rem;
-                }
+  .form {
+    max-width: 768px;
+    margin-inline: auto;
 
-                button {
-                    margin-top: calc(.5rem + 0.3vh);
-                    width: 130px;
-                    height: 45px;
-                    border-radius: 5px;
-                    background: $clr-shadow;
-                    color: $clr-background-dark;
-                    @include muli-text(16px, 500, 48px);
-                }
-            }
+    ul {
+      margin: calc(1rem + 2vh) 0;
+
+      li {
+        .error-title,
+        .error-author {
+          @include muli-text(15px, 500, 32px);
+
+          color: red;
         }
+
+        label {
+          display: block;
+          margin-top: calc(0.5rem + 0.3vh);
+
+          @include muli-text(16px, 500, 32px);
+
+          color: $clr-primary-white;
+        }
+
+        input {
+          margin: calc(0.5rem + 0.3vh) 0;
+          width: 100%;
+          border-radius: 5px;
+          height: calc(25px + 0.8vh);
+
+          @include muli-text(16px, 500, 12px);
+
+          padding: 0 1rem;
+        }
+
+        button {
+          margin-top: calc(0.5rem + 0.3vh);
+          width: 130px;
+          height: 45px;
+          border-radius: 5px;
+          background: $clr-shadow;
+          color: $clr-background-dark;
+
+          @include muli-text(16px, 500, 48px);
+        }
+      }
     }
+  }
 }

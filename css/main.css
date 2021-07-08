@@ -1,5 +1,6 @@
 @import url("https://use.typekit.net/mry2cbf.css");
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 *,
 ::before,
 ::after {
@@ -12,8 +13,8 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
 }
 
 ul {
@@ -31,6 +32,7 @@ header .navbar {
   align-items: center;
   justify-content: space-between;
 }
+
 header .navbar__logo {
   font-family: "Permanent Marker", cursive;
   font-style: normal;
@@ -40,6 +42,7 @@ header .navbar__logo {
   color: #fff;
   cursor: pointer;
 }
+
 header .navbar .hamb {
   position: relative;
   font-size: calc(24px + 0.3vw);
@@ -47,6 +50,7 @@ header .navbar .hamb {
   color: #fff;
   z-index: 1000;
 }
+
 header .timeBox {
   text-align: right;
   padding: 0 calc(1.5rem + 4.5vw);
@@ -82,9 +86,11 @@ header .timeBox {
     padding: 10rem 4rem;
     z-index: 100;
   }
+
   header .navbar__sub li {
     margin-bottom: 5rem;
   }
+
   header .navbar__sub li .items {
     font-family: muli, sans-serif;
     font-style: normal;
@@ -95,23 +101,28 @@ header .timeBox {
     transition: color 1s;
     cursor: pointer;
   }
+
   header .navbar__sub li .items:hover {
     color: #3d5060;
   }
 }
+
 @media (min-width: 768px) {
   header .navbar .hamb {
     display: none;
   }
+
   header .navbar__sub {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
+
   header .navbar__sub li {
     margin: 0 1rem;
   }
+
   header .navbar__sub li .items {
     font-family: muli, sans-serif;
     font-style: normal;
@@ -122,10 +133,12 @@ header .timeBox {
     color: #fff;
   }
 }
+
 .books {
   display: block;
   padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
 }
+
 .books__title {
   font-family: muli, sans-serif;
   font-style: normal;
@@ -135,6 +148,7 @@ header .timeBox {
   text-align: center;
   color: #fff;
 }
+
 .books .container {
   max-width: 800px;
   margin: calc(1rem + 2vh) 0;
@@ -143,11 +157,12 @@ header .timeBox {
   min-height: 450px;
   max-height: 70vh;
   border-radius: 16px;
-  padding: calc(.3rem + 2vh);
+  padding: calc(0.3rem + 2vh);
   overflow: auto;
 }
+
 .books .container .book-item {
-  padding: calc(.3rem + 0.3vw) calc(.5rem + 4.5vw);
+  padding: calc(0.3rem + 0.3vw) calc(0.5rem + 4.5vw);
   width: 100%;
   background: #9bc5ff;
   border-radius: 8px;
@@ -157,6 +172,7 @@ header .timeBox {
   align-items: center;
   justify-content: space-between;
 }
+
 .books .container .book-item .book-data {
   font-family: muli, sans-serif;
   font-style: normal;
@@ -164,9 +180,10 @@ header .timeBox {
   font-weight: 500;
   line-height: 24px;
 }
+
 .books .container .book-item .btn-book {
   cursor: pointer;
-  padding: calc(4px + .1vw) calc(6px + .2vw);
+  padding: calc(4px + 0.1vw) calc(6px + 0.2vw);
   background: red;
   color: #fff;
   border-radius: 5px;
@@ -178,6 +195,7 @@ header .timeBox {
   display: none;
   padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
 }
+
 .add__title {
   font-family: muli, sans-serif;
   font-style: normal;
@@ -187,13 +205,16 @@ header .timeBox {
   text-align: center;
   color: #fff;
 }
+
 .add .form {
   max-width: 768px;
   margin-inline: auto;
 }
+
 .add .form ul {
   margin: calc(1rem + 2vh) 0;
 }
+
 .add .form ul li .error-title,
 .add .form ul li .error-author {
   font-family: muli, sans-serif;
@@ -203,9 +224,10 @@ header .timeBox {
   line-height: 32px;
   color: red;
 }
+
 .add .form ul li label {
   display: block;
-  margin-top: calc(.5rem + 0.3vh);
+  margin-top: calc(0.5rem + 0.3vh);
   font-family: muli, sans-serif;
   font-style: normal;
   font-size: calc(16px + 0.3vw);
@@ -213,8 +235,9 @@ header .timeBox {
   line-height: 32px;
   color: #fff;
 }
+
 .add .form ul li input {
-  margin: calc(.5rem + 0.3vh) 0;
+  margin: calc(0.5rem + 0.3vh) 0;
   width: 100%;
   border-radius: 5px;
   height: calc(25px + 0.8vh);
@@ -225,8 +248,9 @@ header .timeBox {
   line-height: 12px;
   padding: 0 1rem;
 }
+
 .add .form ul li button {
-  margin-top: calc(.5rem + 0.3vh);
+  margin-top: calc(0.5rem + 0.3vh);
   width: 130px;
   height: 45px;
   border-radius: 5px;
@@ -243,6 +267,7 @@ header .timeBox {
   display: none;
   padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
 }
+
 .contact__title {
   font-family: muli, sans-serif;
   font-style: normal;
@@ -252,15 +277,18 @@ header .timeBox {
   text-align: center;
   color: #fff;
 }
+
 .contact .info {
   margin: calc(1rem + 2vh) 0;
   max-width: 550px;
   margin-inline: auto;
 }
+
 .contact .info ul {
   list-style: circle;
   padding-left: 1rem;
 }
+
 .contact .info .first__p,
 .contact .info .second__p,
 .contact .info ul li {
@@ -280,6 +308,7 @@ header .timeBox {
   text-align: center;
   width: 100%;
 }
+
 .footer__p {
   font-family: muli, sans-serif;
   font-style: normal;
@@ -293,5 +322,3 @@ header .timeBox {
   transform: scale(1.1);
   background: #f16565;
 }
-
-/*# sourceMappingURL=main.css.map */
