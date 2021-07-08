@@ -19,6 +19,14 @@ header {
       z-index: 1000;
     }
   }
+
+  .timeBox {
+    text-align: right;
+    padding: 0 calc(1.5rem + 4.5vw);
+    color: $clr-primary-white;
+    @include muli-text(16px, 500, 32px);
+    margin: 0 1rem;
+  }
 }
 
 .navbar__sub.active {

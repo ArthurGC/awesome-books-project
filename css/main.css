@@ -47,6 +47,17 @@ header .navbar .hamb {
   color: #fff;
   z-index: 1000;
 }
+header .timeBox {
+  text-align: right;
+  padding: 0 calc(1.5rem + 4.5vw);
+  color: #fff;
+  font-family: muli, sans-serif;
+  font-style: normal;
+  font-size: calc(16px + 0.3vw);
+  font-weight: 500;
+  line-height: 32px;
+  margin: 0 1rem;
+}
 
 .navbar__sub.active {
   visibility: visible;

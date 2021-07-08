@@ -39,3 +39,8 @@ import {menuButtons, showSection} from './navigation.js'
 menuButtons.forEach((menu) => {
     menu.addEventListener('click', (e) => showSection(e));
   });
+
+// Luxon functionality
+import {fullDate, addDateToViewport} from './time.js'
+
+addDateToViewport(fullDate);
