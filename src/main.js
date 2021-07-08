@@ -1,7 +1,13 @@
 let booksList = [];
+/* eslint-disable */
+const { DateTime } = luxon;
+/* eslint-enable */
+const dt = DateTime.now();
+const fullDate = dt.toLocaleString(DateTime.DATETIME_MED);
 
 const form = document.querySelector('#form');
 const bookContainer = document.querySelector('.book-container');
+const date = document.querySelector('#date');
 
 class Book {
   constructor(title, author) {
@@ -94,3 +100,32 @@ bookContainer.addEventListener('click', (e) => {
   Store.removeBook(e.target);
   List.removeBookInViewport(e.target);
 });
+
+// Menu Functionality
+
+const listSection = document.querySelector('#list');
+const addSection = document.querySelector('#add');
+const contactSection = document.querySelector('#contact');
+const menuButtons = [...document.querySelectorAll('.navbar-nav a')];
+
+const showSection = (e) => {
+  e.preventDefault();
+  if (e.target.dataset.id === '1') {
+    listSection.style.display = 'block';
+    addSection.style.display = 'none';
+    contactSection.style.display = 'none';
+  } else if (e.target.dataset.id === '2') {
+    listSection.style.display = 'none';
+    addSection.style.display = 'block';
+    contactSection.style.display = 'none';
+  } else if (e.target.dataset.id === '3') {
+    listSection.style.display = 'none';
+    addSection.style.display = 'none';
+    contactSection.style.display = 'block';
+  }
+};
+menuButtons.forEach((menu) => {
+  menu.addEventListener('click', (e) => showSection(e));
+});
+
+date.innerHTML = `<p>${fullDate}</p>`;

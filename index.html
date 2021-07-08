@@ -12,7 +12,31 @@
     <title>Awesome Books</title>
 </head>
 <body>
-    <section class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Awesome Books</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" data-id="1" aria-current="page" href="#list">List</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#add" data-id="2">Add Book</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact" data-id="3">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <span id="date"></span>
+    </header>
+    <section class="container" id="list">
         <h1 class='heading'>Awesome Books</h1>
           <table class="table table-hover">
             <thead>
@@ -27,7 +51,7 @@
             </tbody>
           </table>
     </section>
-    <section class="container">
+    <section class="container" id="add">
     <h2 class='heading title2'>Add a new Book</h2>
     <form id="form">
         <div class="mb-3">
@@ -41,7 +65,23 @@
         <button type="submit" class="btn btn-primary">Add book</button>
       </form>
     </section>
+    <section class="container" id="contact">
+      <h2>Contact Information</h2>
+      <div>
+        <p> Do you have any questions or you just want to say "Hello"? You can reach out to us!</p>
+        <ul>
+          <li>Our e-mails: epononanvialex@gmail.com / alxguzmanc@gmail.com</li>
+          <li>Our phone number: 00 57 997558421</li>
+          <li>Our address: Streetname 22, 84503 City, Country</li>
+        </ul>
+      </div>
+
+    </section>
+    <footer class="bg-dark text-light p-3">
+      <p>Copyright Microverse 2021...</p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0/build/global/luxon.min.js"></script>
     <script src="src/main.js"></script>
 </body>
 </html>
