@@ -1,7 +1,11 @@
 let booksList = [];
+var DateTime = luxon.DateTime;
+const dt = DateTime.now();
+const full_date = dt.toLocaleString(DateTime.DATETIME_MED);
 
 const form = document.querySelector('#form');
 const bookContainer = document.querySelector('.book-container');
+const date = document.querySelector('#date');
 
 class Book {
   constructor(title, author) {
@@ -124,3 +128,5 @@ const showSection = (e) => {
 menuButtons.forEach(menu => {
   menu.addEventListener('click', (e) => showSection(e));
 })
+
+date.innerHTML = `<p>${full_date}</p>`

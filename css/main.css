@@ -27,6 +27,14 @@ footer {
   display: none;
 }
 
+#date {
+  text-align: right;
+}
+
+#date p {
+  margin-right: 20px;
+}
+
 .heading {
   text-align: center;
   padding: 2rem 0;
