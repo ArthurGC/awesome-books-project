@@ -73,6 +73,10 @@ menuButtons.forEach((menu) => {
   menu.addEventListener('click', (e) => showSection(e));
 });
 
+// Navbar navigation functionality End
+
+// Luxon Date and Time Start
+
 addDateToViewport(fullDate);
 
-// Navbar navigation functionality End
+// Luxon Date and Time End
