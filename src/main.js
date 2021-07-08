@@ -110,7 +110,6 @@ const menuButtons = [...document.querySelectorAll('.navbar-nav a')];
 const showSection = (e) => {
   e.preventDefault();
   if (e.target.dataset.id === '1') {
-    console.log('Right');
     listSection.style.display = 'block';
     addSection.style.display = 'none';
     contactSection.style.display = 'none';
