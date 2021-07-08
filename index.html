@@ -7,11 +7,62 @@
     <meta name="keywords" content="ArthurGC, Books, Awesome Books, Microverse" />
     <meta name="author" content="Arthur Guzman, Alex Eponon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.svg" />
     <link rel="stylesheet" href="css/main.css">
     <title>Awesome Books</title>
 </head>
 <body>
+<header>
+  <nav class="navbar">
+    <a href="index.html"><img src="" alt="awesome books logo"></a>
+    <ul class="navbar__sub">
+      <li><p>List</p></li>
+      <li><p>Add new</p></li>
+      <li><p>Contact</p></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="books">
+    <h1 class="books__title">All awesome books</h1>
+    <ul class="container">
 
-  <script type="module" src="src/main.js"></script>
+    </ul>
+  </section>
+  <section class="add">
+    <h2 class="add__title">Add a new book</h2>
+    <form class="form">
+      <ul>
+        <li>
+          <label for="title">Title:</label>
+          <input type="text" name="title" id="title" class="form__title">
+        </li>
+        <li>
+          <label for="author">Author:</label>
+          <input type="text" name="author" id="author" class="form__author">
+        </li>
+        <li>
+          <button type="submit">Add Book</button>
+        </li>
+      </ul>
+    </form>
+  </section>
+  <section class="contact">
+    <h2 class="contact__title">Contact Information</h2>
+    <article>
+      <p class="first__p">Do you have any questions or your just want to say "Hello"</p>
+      <p class="second__p">You can reach out to us!</p>
+      <ul>
+        <li>Our e-mail: alxguzmanc@gmail.com</li>
+        <li>Our phone number: +51 998362412</li>
+        <li>Our address: 5th December, 126 - Arequipa - Peru</li>
+      </ul>
+    </article>
+  </section>
+  <footer class="footer">
+    <p class="footer_p">2021 Awesome Books. Some Rights Reserved</p>
+  </footer>
+</main>
+  <!-- <script type="module" src="src/main.js"></script> -->
 </body>
 </html>

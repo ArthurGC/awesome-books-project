@@ -1,0 +1,26 @@
+@mixin muli-text($size, $weight, $height) {
+  font-family: muli, sans-serif;
+  font-style: normal;
+  //   font-size: calc($size + 0.5vw);
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+@mixin marker-text($size, $weight, $height) {
+  font-family: 'Permanent Marker', cursive;
+  font-style: normal;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin flex($direction, $align: false, $justify: false) {
+  display: flex;
+  flex-direction: $direction;
+  @if $align {
+    align-items: $align;
+  }
+  @if $justify {
+    justify-content: $justify;
+  }
+}
