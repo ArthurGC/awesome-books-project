@@ -39,8 +39,8 @@ form.addEventListener('submit', (e) => {
   const title = document.querySelector('#title');
   const author = document.querySelector('#author');
 
-  let titleValue = title.value.trim();
-  let authorValue = author.value.trim();
+  const titleValue = title.value.trim();
+  const authorValue = author.value.trim();
 
   if (titleValue !== '' && authorValue !== '') {
     const book = new Book(title.value, author.value);
