@@ -39,15 +39,18 @@ form.addEventListener('submit', (e) => {
   const title = document.querySelector('#title');
   const author = document.querySelector('#author');
 
-  if (title.value !== '' && author.value !== '') {
+  let titleValue = title.value.trim();
+  let authorValue = author.value.trim();
+
+  if (titleValue !== '' && authorValue !== '') {
     const book = new Book(title.value, author.value);
     List.addBookToViewport(book);
     Store.setBook(book);
     form.reset();
-  } else if (title.value === '') {
+  } else if (titleValue === '') {
     title.style.border = '2px solid red';
     titleError.textContent = 'Please, provide a Title';
-  } else if (author.value === '') {
+  } else if (authorValue === '') {
     author.style.border = '2px solid red';
     authorError.textContent = 'Please, provide an Author';
   }
