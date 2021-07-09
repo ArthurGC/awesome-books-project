@@ -1,0 +1,32 @@
+@use '../utilities' as *;
+
+.contact {
+  display: none;
+  padding: calc(1rem + 0.8vw) calc(1.5rem + 4.5vw);
+
+  &__title {
+    @include muli-text(24px, 800, 32px, 0.7);
+
+    text-align: center;
+    color: $clr-primary-white;
+  }
+
+  .info {
+    margin: calc(1rem + 2vh) 0;
+    max-width: 550px;
+    margin-inline: auto;
+
+    ul {
+      list-style: circle;
+      padding-left: 1rem;
+    }
+
+    .first__p,
+    .second__p,
+    ul li {
+      @include muli-text(16px, 500, 32px);
+
+      color: $clr-primary-white;
+    }
+  }
+}
